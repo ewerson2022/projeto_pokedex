@@ -1,0 +1,63 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <title>tela inicial</title>
+</head>
+<body>
+    <header class="header">
+        <img src="{% static 'img/pokemonimg.png' %}" class="pokemon_logo" alt="logo_pokemon">
+    </header>
+    <h1>Bem vindo treinador pokémon</h1>
+
+    <form method="post" action="{% url 'inicio' %}">
+        {% csrf_token %}
+        <label for="pokemon">Nome do Pokémon:</label>
+        <input type="text" name="pokemon" id="pokemon" required>
+        <button type="submit">Buscar</button>
+    </form>
+        <div class="container">
+            <div class="pokemon-card">
+                <div class="pokemon">
+                    {% if poke %}
+                    <div class="pokemon-details">
+                        <img src="{{ poke.sprites.front_default }}" class="pokemon_image" alt="Imagem do Pokémon">
+                        <p>Detalhes sobre o do Pokémon:</p>
+                        <p>Nome: {{ poke.name }}</p> 
+                        <p>Altura: {{ poke.height }}</p>
+                        <p>Peso: {{ poke.weight }}</p>
+                    </div>
+                    {% endif %}
+            
+                    {% if habilidades_pokemon %}
+                    <div class="pokemon-skills">
+                        <p>Habilidades do Pokémon:</p>
+                        <ul>
+                            {% for habilidade in habilidades_pokemon %}
+                                <li>{{ habilidade }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    <div>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="message">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <footer class="footer">
+                <p class="footer__text">desenvolvido por <a href="https://github.com/ewerson2022"> ewerson2022</a></p>
+            </footer>
+        </div>
+    

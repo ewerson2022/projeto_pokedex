@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+:root {
+    --font-size: 16px;
+    --gray-900: #25252b;
+    --white-900: #fff;
+
+    
+}
+
+body {
+    background-color: #faf4f4; /* Cor de fundo */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden; 
+    margin-bottom: 0;
+    background: linear-gradient(45deg, #ffff00, #0c03ff);
+}
+
+.header {
+    background-color: var(--gray-900);
+    text-align: center;
+    height: 8rem;
+    margin-bottom: 120px;
+    
+}
+.pokemon_logo{
+    width: 250px;
+}
+
+body {
+    background-color: #faf4f4;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Largura fixa */
+    height: 500px; /* Altura fixa */
+    margin: 2rem auto; /* Centraliza o container */
+    overflow: hidden; /* Oculta a barra de rolagem */
+}
+
+.header {
+    background-color: var(--gray-900);
+    text-align: center;
+}
+
+.pokemon-card {
+    background-color: #ffff00;
+    padding: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px;
+    background: linear-gradient(50deg, #ffff00, #0c03ff);
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon_image {
+    max-width: 100%;
+    text-align: center;
+}
+
+
+.pokemon-details {
+    text-align: center;
+}
+
+.pokemon-skills {
+    text-align: center;
+
+}
+h1 {
+    color: #000000; /* Cor avermelhada para o título */
+}
+
+form {
+    margin: 20px auto; /* Centraliza o formulário */
+    max-width: 400px; /* Define a largura máxima para o formulário */
+    background-color: #ffff00; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 8px; /* Adiciona cantos arredondados */
+    box-shadow: 0 0 10px rgba(78, 2, 255, 0.1); /* Adiciona uma sombra sutil */
+
+    background: linear-gradient(50deg, #ffff00, #0c03ff);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #000000; /* Cor verde para o botão */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5c6f5d; /* Verde mais escuro ao passar o mouse */
+}
+
+.message {
+    margin-top: 10px;
+    color: #ff4040; /* Cor avermelhada para mensagens de erro */
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #000000; /* Cor de texto escura para os itens da lista */
+}
+
+.footer{
+    background-color: var(--gray-900);
+    color: #fff;
+    height: 80px;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; 
+}
+
+.footer__text{
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 5px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000; /* Cor da "thumb" (parte que você arrasta) */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "track" (parte de fundo) */
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* Utiliza 100% da largura da tela em telas menores que 600px */
+        margin: 1rem auto;
+    }
+}
